@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!--Poppins-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        * {
+            font-family: poppins;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: rgb(255, 118, 118);
+        }
+        h3{
+            background-color: antiquewhite;
+        }
+        ul{
+            background-color: antiquewhite;
+        }
+        li {
+            background-color: antiquewhite;
+            list-style: none;
+            font-size: 20px;
+        }
+        h1 {
+            font-size: 30px;
+            background-color: antiquewhite;
+        }
+        p {
+            font-size: 20px;
+            background-color: antiquewhite;
+        }
+        .container {
+            border: 2px solid black;
+            background-color: antiquewhite;
+            margin: 50px;
+        }
+        form {
+            background-color: antiquewhite;
+        }
+        .result {
+            background-color: antiquewhite;
+        }
+        button {
+            background-color: antiquewhite;
+        }
+        .form-control {
+            background-color: antiquewhite;
+        }
+        h2 {
+            background-color: antiquewhite;
+        }
+    </style>
+    <div class="container">
+            <h1>Grade calculator</h1>
+        
+
+        <p>Enter your your Prelim grade(%) from 1-100 then click submit</p>
+        <form method="POST" action = "/calculate">
+         <input type="number" class="form-control" id="x" name="x" min="0" max="100" placeholder="0" value="0">
+
+        <p>Finally enter your number of absences. </p>
+         <form method="POST" action = "/calculate">
+            <input type="number" class="form-control" id="a" name="a" min="0" max="100" placeholder="0" value="0">
+    
+            <br><br>
+            <div class="result" value="calculate">
+                <button type="submit">Submit</button>
+             </div>
+
+         <h1>Results: {{message}}</h1>
+
+        
+
+        <h2>Grade needed to pass: 75</h2>
+            <ul>
+                <li>Midterms: {{midterms}} </li>
+                <li>Finals: {{finals}}</li>
+            </ul>
+
+        <h2></h2>    
+        <h2>Grade needed to qualify for Dean's lister: 90<br>  </h2>
+
+        <h3>{{qualifymessage}}</h3>
+            <ul>
+                <li>Midterms: {{Midterms_dean}}</li>
+                <li>Finals: {{Finals_dean}}</li>
+            </ul>
+
+
+
+   </form>
+          </form>
+    </div>
+</body>
+</html>
